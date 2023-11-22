@@ -13,6 +13,75 @@ html {
   font-size: 12px;
 }
 
+/* Медиа-запрос для отображения/скрытия бургер-меню и мобильного меню */
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+  .header__right {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .half {
+    width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  .half-content1,
+  .half-content2 {
+    max-width: 100% !important;
+    margin: inherit;
+    padding: inherit;
+  }
+
+  .half-s {
+    display: none;
+  }
+
+  .work {
+    flex-direction: column;
+  }
+
+  .grid-container-1 {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+  .grid-container-1 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .section3-title {
+    font-size: 2.5rem !important;
+  }
+  .section3-text {
+    font-size: 1.8rem !important;
+  }
+  .section4-title {
+    font-size: 2rem !important;
+  }
+}
+
 :root {
   /* Neutral Colors */
   --neutral-black: #263238;
@@ -175,39 +244,37 @@ button .primary {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .header__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: InterSemiBold;
-    font-size: 25px;
-    .top {
-      text-transform: uppercase;
-      line-height: 14px;
-    }
-    .down {
-      color: var(--primary);
-    }
-  }
+.header__inner a {
+  font-size: 18px;
+  text-transform: uppercase;
 
-  .header__right {
-    .header__nav__link:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
+  transition: all ease-in-out 0.15s;
+  color: var(--neutral-white);
+}
 
-  a {
-    font-size: 18px;
-    text-transform: uppercase;
+.header__inner a:hover {
+  color: var(--primary);
+}
 
-    transition: all ease-in-out 0.15s;
-    color: var(--neutral-white);
-  }
+.header__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: InterSemiBold;
+  font-size: 25px;
+}
 
-  a:hover {
-    color: var(--primary);
-  }
+.header__left .top {
+  text-transform: uppercase;
+  line-height: 14px;
+}
+.header__left .down {
+  color: var(--primary);
+}
+.header__nav__link:not(:last-child) {
+  margin-right: 20px;
 }
 
 /* Бургер-меню */
@@ -256,75 +323,6 @@ button .primary {
   margin-bottom: 10px;
 }
 
-/* Медиа-запрос для отображения/скрытия бургер-меню и мобильного меню */
-@media only screen and (max-width: 992px) {
-  html {
-    font-size: 8px;
-  }
-  .header__right {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: flex;
-  }
-
-  .half {
-    width: 100% !important;
-    max-height: 100% !important;
-  }
-
-  .half-content1,
-  .half-content2 {
-    max-width: 100% !important;
-    margin: inherit;
-    padding: inherit;
-  }
-
-  .half-s {
-    display: none;
-  }
-
-  .work {
-    flex-direction: column;
-  }
-
-  .grid-container-1 {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
-  }
-}
-
-@media only screen and (max-width: 1200px) and (min-width: 900px) {
-  html {
-    font-size: 10px;
-  }
-  .grid-container-1 {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  html {
-    font-size: 7px;
-  }
-}
-
-@media only screen and (max-width: 610px) {
-  .section3-title {
-    font-size: 2.5rem !important;
-  }
-  .section3-text {
-    font-size: 1.8rem !important;
-  }
-  .section4-title {
-    font-size: 2rem !important;
-  }
-}
-
 /* Intro */
 
 .intro {
@@ -333,21 +331,23 @@ button .primary {
   height: 800px;
   background: url(./img/inner-bg.jpg) var(--neutral-black) center 25% no-repeat;
   background-size: cover;
-  .intro__name {
-    text-transform: uppercase;
-    font-family: InterBold;
-    text-align: left;
-    padding-top: 280px;
-    h1 {
-      font-size: 30px;
-      color: var(--neutral-silver);
-    }
-    span {
-      font-size: 25px;
-      color: var(--primary);
-      font-family: InterMedium;
-    }
-  }
+}
+
+.intro__name {
+  text-transform: uppercase;
+  font-family: InterBold;
+  text-align: left;
+  padding-top: 280px;
+}
+
+.intro__name h1 {
+  font-size: 30px;
+  color: var(--neutral-silver);
+}
+.intro__name span {
+  font-size: 25px;
+  color: var(--primary);
+  font-family: InterMedium;
 }
 
 /* Section 1 */
