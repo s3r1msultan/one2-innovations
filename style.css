@@ -49,6 +49,19 @@ body {
     max-width: 100% !important;
   }
 
+  .half h2 {
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+  }
+
+  .half-content2 h2 {
+    line-height: 4rem;
+  }
+
+  .rounded li {
+    font-size: 16px !important;
+  }
+
   .half-s {
     display: none;
   }
