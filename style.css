@@ -366,16 +366,18 @@ button .primary {
   color: #fff;
   font-size: 3.7rem;
   z-index: 1000;
-  &::before {
-    content: "M";
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 24rem;
-    color: var(--white-blue);
-  }
 }
+
+.section1-title::before {
+  content: "M";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 24rem;
+  color: var(--white-blue);
+}
+
 .grid-container-1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -385,37 +387,38 @@ button .primary {
   align-items: start;
   padding-bottom: 150px;
   padding-top: 60px;
+}
 
-  h3 {
-    font-family: InterMedium;
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-  }
+.grid-container-1 .grid-item-text {
+  text-align: center;
+}
 
-  .grid-item-logo {
-    width: 132px;
-    height: 132px;
-    position: relative;
-    margin: 0 auto;
-    background-color: var(--white-blue);
-    border-radius: 50%;
-    margin-bottom: 2rem;
-    img {
-      width: 75px;
-      height: 75px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+.grid-container-1 h3 {
+  font-family: InterMedium;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
 
-  .grid-item-text {
-    text-align: center;
-  }
+.grid-container-1 .grid-item-logo {
+  width: 132px;
+  height: 132px;
+  position: relative;
+  margin: 0 auto;
+  background-color: var(--white-blue);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.grid-container-1 .grid-item-logo img {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .grid-item-1 {
@@ -423,11 +426,12 @@ button .primary {
   z-index: 1000;
   opacity: 0.8;
   transition: opacity 0.15s ease-in-out;
-  a {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer !important;
-  }
+}
+
+.grid-item-1 a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer !important;
 }
 
 .grid-item-1:hover {
@@ -438,26 +442,30 @@ button .primary {
 
 .section2 {
   font-family: InterRegular;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
+
+.section2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .work {
   display: flex;
 }
 .half {
   width: 50%;
   max-height: 475px;
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 36px;
-  }
 }
+
+.half h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 36px;
+}
+
 .rounded {
   list-style: none;
   font: InterRegular;
@@ -483,14 +491,15 @@ button .primary {
 .half-1 {
   color: #fff;
   background: #222222;
-  .half-content1 {
-    max-width: 485px;
-    padding-left: 10px;
-    padding-top: 70px;
-    padding-bottom: 110px;
-    margin-right: 100px;
-    margin-left: auto;
-  }
+}
+
+.half-1 .half-content1 {
+  max-width: 485px;
+  padding-left: 10px;
+  padding-top: 70px;
+  padding-bottom: 110px;
+  margin-right: 100px;
+  margin-left: auto;
 }
 
 .half-content1 > div {
@@ -502,12 +511,10 @@ button .primary {
   color: #000;
   background: #f3f3f3;
 }
-.half-s {
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.half-s img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .half-content2 {
@@ -517,13 +524,15 @@ button .primary {
   margin-left: 70px;
   margin-right: auto;
   padding-right: 10px;
-  h2 {
-    line-height: 2rem;
-    text-transform: none;
-    font-family: InterMedium;
-    font-weight: 500;
-  }
 }
+
+.half-content2 h2 {
+  line-height: 2rem;
+  text-transform: none;
+  font-family: InterMedium;
+  font-weight: 500;
+}
+
 .half-content2 > div {
   font-size: 13px;
   display: inline-flex;
@@ -541,18 +550,18 @@ button .primary {
   text-transform: uppercase;
   line-height: 21rem;
   margin-top: 100px;
+}
 
-  &::before {
-    font-weight: bold;
-    content: "B";
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 24rem;
-    color: #d7d7d7;
-    line-height: 21rem;
-  }
+.section3-title::before {
+  font-weight: bold;
+  content: "B";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 24rem;
+  color: #d7d7d7;
+  line-height: 21rem;
 }
 
 .section3-text {
@@ -574,21 +583,23 @@ button .primary {
   max-width: 270px;
   padding-bottom: 105px;
   transition: transform 0.2s ease-in-out;
-  h3 {
-    padding-top: 35px;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    color: var(--gray);
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
-  }
-  img {
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+}
+
+.grid-item-2 h3 {
+  padding-top: 35px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.grid-item-2 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .grid-item-2:hover {
@@ -603,14 +614,17 @@ button .primary {
   z-index: 1000;
   padding-top: 130px;
   color: white;
-  .grid-item-1 {
-    opacity: 0.8;
-    transition: opacity 0.2s ease-in-out;
-  }
-  .grid-item-1:hover {
-    opacity: 1;
-  }
 }
+
+.section4 .grid-item-1 {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.section4 .grid-item-1:hover {
+  opacity: 1;
+}
+
 .section4-title {
   font-family: InterBold;
   text-transform: uppercase;
@@ -620,59 +634,62 @@ button .primary {
   font-size: 3.7rem;
   z-index: 1000;
   margin-bottom: 60px;
-  &::before {
-    content: "CS";
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 24rem;
-    color: var(--white-blue);
-  }
+}
+
+.section4-title::before {
+  content: "CS";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 24rem;
+  color: var(--white-blue);
 }
 
 .section5 {
   padding-bottom: 50px;
   text-align: center;
-  p:last-child {
-    font-size: 20px;
-  }
-
-  .rounded-list li {
-    font-size: 24px;
-    position: relative;
-    display: block;
-    padding: 1em;
-    margin: 1em 0;
-    background: #ddd;
-    color: #444;
-    border-radius: 0.3em;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .rounded-list li:hover {
-    background: #eee;
-    color: var(--primary);
-  }
 }
+
+.section5 p:last-child {
+  font-size: 20px;
+}
+
+.section5 .rounded-list li {
+  font-size: 24px;
+  position: relative;
+  display: block;
+  padding: 1em;
+  margin: 1em 0;
+  background: #ddd;
+  color: #444;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.section5 .rounded-list li:hover {
+  background: #eee;
+  color: var(--primary);
+}
+
 .section5-title {
   font-weight: 500;
   font-size: 3.7rem;
   text-transform: uppercase;
   line-height: 21rem;
   margin-top: 100px;
+}
 
-  &::before {
-    font-weight: bold;
-    content: "DA";
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 24rem;
-    color: #d7d7d7;
-    line-height: 21rem;
-  }
+.section5-title::before {
+  font-weight: bold;
+  content: "DA";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 24rem;
+  color: #d7d7d7;
+  line-height: 21rem;
 }
 
 .section5-text {
@@ -687,26 +704,28 @@ button .primary {
   color: #fff;
   text-align: center;
   background-color: var(--dark-gray);
-  h2 {
-    position: relative;
-    z-index: 10;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    line-height: 21rem;
-    font-size: 3.7rem;
-    text-transform: uppercase;
-    &::before {
-      content: "C";
-      position: absolute;
-      left: 0;
-      right: 0;
-      line-height: 21rem;
-      z-index: -10;
-      color: #ffffff47;
-      font-size: 24.7rem;
-      margin: 0 auto;
-    }
-  }
+}
+
+.footer h2 {
+  position: relative;
+  z-index: 10;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  line-height: 21rem;
+  font-size: 3.7rem;
+  text-transform: uppercase;
+}
+
+.footer h2::before {
+  content: "C";
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 21rem;
+  z-index: -10;
+  color: #ffffff47;
+  font-size: 24.7rem;
+  margin: 0 auto;
 }
 
 .footer-top {
