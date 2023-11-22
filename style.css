@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: InterRegular;
-}
-
 html {
   font-size: 12px;
+}
+
+body {
+  font-family: MontserratRegular;
 }
 
 /* Медиа-запрос для отображения/скрытия бургер-меню и мобильного меню */
@@ -31,6 +31,14 @@ html {
     display: flex;
   }
 
+  .mobile-menu a {
+    text-transform: uppercase;
+  }
+
+  .grid-container-1 {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+  }
+
   .half {
     width: 100% !important;
     max-height: 100% !important;
@@ -39,8 +47,6 @@ html {
   .half-content1,
   .half-content2 {
     max-width: 100% !important;
-    margin: inherit;
-    padding: inherit;
   }
 
   .half-s {
@@ -49,10 +55,6 @@ html {
 
   .work {
     flex-direction: column;
-  }
-
-  .grid-container-1 {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
   }
 }
 
@@ -116,27 +118,55 @@ html {
   --dark-gray: #222222;
 }
 
+/* Montserrat fonts */
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("./fonts/Monsterrat/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url("./fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("./fonts/Montserrat/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+
+/* Inter fonts */
+
 @font-face {
   font-family: InterBold;
-  src: url("./fonts/Inter-Bold.ttf");
+  src: url("./fonts/Inter/Inter-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: InterSemiBold;
-  src: url("./fonts/Inter-SemiBold.ttf");
+  src: url("./fonts/Inter/Inter-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
   font-family: InterMedium;
-  src: url("./fonts/Inter-Medium.ttf");
+  src: url("./fonts/Inter/Inter-SemiBold.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: InterRegular;
-  src: url("./fonts/Inter-Regular.ttf");
+  src: url("./fonts/Inter/Inter-Regular.ttf");
   font-weight: 400;
 }
 
@@ -150,7 +180,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: InterSemiBold;
+  font-family: MontserratSemiBold;
 }
 
 h1 {
@@ -187,7 +217,7 @@ h4 {
   left: 0;
   width: 100%;
   background-color: #333;
-  transition: transform 0.3s; /* Добавим анимацию при скрытии/показе хедера */
+  transition: transform 0.3s ease-in-out;
   z-index: 1000;
 }
 
@@ -203,7 +233,7 @@ h4 {
 
 .header__inner a {
   font-size: 18px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--neutral-white);
   transition: all ease-in-out 0.15s;
 }
@@ -216,14 +246,14 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: InterSemiBold;
+  font-family: MontserratSemiBold;
   font-size: 25px;
 }
 
 .header__left .top {
   color: var(--neutral-white);
   text-transform: uppercase;
-  line-height: 14px;
+  line-height: 16px;
 }
 .header__left .down {
   color: var(--primary);
@@ -290,7 +320,7 @@ h4 {
 
 .intro__name {
   text-transform: uppercase;
-  font-family: InterBold;
+  font-family: MontserratBold;
   text-align: left;
   padding-top: 280px;
 }
@@ -302,7 +332,7 @@ h4 {
 .intro__name span {
   font-size: 25px;
   color: var(--primary);
-  font-family: InterMedium;
+  font-family: MontserratMedium;
 }
 
 /* Section 1 */
@@ -315,7 +345,8 @@ h4 {
 }
 
 .section1-title {
-  font-family: InterBold;
+  font-family: InterMedium;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   line-height: 21rem;
@@ -325,6 +356,7 @@ h4 {
 }
 
 .section1-title::before {
+  font-family: InterBold;
   content: "M";
   z-index: -1;
   position: absolute;
@@ -337,12 +369,12 @@ h4 {
 .grid-container-1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-auto-rows: auto;
   column-gap: 30px;
   justify-content: space-around;
-  align-items: start;
+  align-items: stretch;
   padding-bottom: 150px;
   padding-top: 60px;
+  row-gap: 30px;
 }
 
 .grid-container-1 .grid-item-text {
@@ -350,12 +382,11 @@ h4 {
 }
 
 .grid-container-1 h3 {
-  font-family: InterMedium;
+  font-family: MontserratMedium;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 2rem;
   text-transform: uppercase;
-  margin-bottom: 3rem;
 }
 
 .grid-container-1 .grid-item-logo {
@@ -366,6 +397,8 @@ h4 {
   background-color: var(--white-blue);
   border-radius: 50%;
   margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
 .grid-container-1 .grid-item-logo img {
@@ -375,6 +408,33 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.grid-container-1 .grid-item-1:hover .grid-item-logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#5de000, var(--primary));
+  animation: animate 4s linear infinite;
+}
+
+.grid-container-1 .grid-item-1:hover .grid-item-logo::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--white-blue);
+  border-radius: 126px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .grid-item-1 {
@@ -382,6 +442,9 @@ h4 {
   z-index: 10;
   opacity: 0.8;
   transition: opacity 0.15s ease-in-out;
+  border: 3px solid #ffffff47;
+  border-radius: 40px;
+  padding: 20px;
 }
 
 .grid-item-1 a {
@@ -397,7 +460,7 @@ h4 {
 /* Section 2 */
 
 .section2 {
-  font-family: InterRegular;
+  font-family: MontserratRegular;
 }
 
 .section2 img {
@@ -424,7 +487,7 @@ h4 {
 
 .rounded {
   list-style: none;
-  font: InterRegular;
+  font: MontserratRegular;
   padding: 0;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -485,7 +548,7 @@ h4 {
 .half-content2 h2 {
   line-height: 2rem;
   text-transform: none;
-  font-family: InterMedium;
+  font-family: MontserratMedium;
   font-weight: 500;
 }
 
@@ -502,7 +565,7 @@ h4 {
 }
 .section3-title {
   font-weight: 500;
-  font-size: 3.7rem;
+  font-size: 36px;
   text-transform: uppercase;
   line-height: 21rem;
   margin-top: 100px;
@@ -521,7 +584,7 @@ h4 {
 }
 
 .section3-text {
-  font-size: 3rem;
+  font-size: 30px;
   line-height: 3.7rem;
   margin-bottom: 150px;
 }
@@ -582,7 +645,8 @@ h4 {
 }
 
 .section4-title {
-  font-family: InterBold;
+  font-family: InterMedium;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   line-height: 21rem;
@@ -593,6 +657,7 @@ h4 {
 }
 
 .section4-title::before {
+  font-family: InterBold;
   content: "CS";
   z-index: -1;
   position: absolute;
