@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(".burger-menu").click(function () {
     $(this).toggleClass("active");
-    $(".mobile-menu").slideToggle(300);
+    $(".mobile-menu").slideToggle(400);
     if ($(this).hasClass("active")) {
       $(".mobile-menu").css("display", "flex");
     }
